@@ -1,0 +1,26 @@
+{
+  "name": "metriques",
+  "version": "0.0.0",
+  "description": "Functions to get meter informations from french words",
+  "main": "metriques.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/WhiteFangs/metriques.js.git"
+  },
+  "keywords": [
+    "meter",
+    "poetry",
+    "french",
+    "words",
+    "poems"
+  ],
+  "author": "WhiteFangs",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/WhiteFangs/metriques.js/issues"
+  },
+  "homepage": "https://github.com/WhiteFangs/metriques.js"
+}
