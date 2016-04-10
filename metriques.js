@@ -1,4 +1,4 @@
-sansAccents = function (s) {
+ function sansAccents(s) {
     var r = s.toLowerCase();
     r = r.replace(/[àáâãäå]/g, "a");
     r = r.replace(/[èéêë]/g, "e");
@@ -10,7 +10,7 @@ sansAccents = function (s) {
 };
 
 // Comptage et découpage d'un mot en syllabes avec les possibilités de diérèses gérées par la variable max
-syllabify = function (s) {
+function syllabify(s) {
     if (s.toLowerCase() == "pays") // Exception pour ce mot ingérable autrement
         return ({ syllabes: ["pa", "ys"], nb: 2, max: 2 });
     if (!s.trim().match(/[a-zA-Z]/g))
@@ -89,7 +89,7 @@ syllabify = function (s) {
 };
 
 // Prend un tableau de mots en entrée. Pour chaque mot dans le tableau (vers), applique syllabify avec les règles d'élision du e
-elisioner = function (mots) {
+function elisioner(mots) {
     var voyelles = ['a', 'A', 'á', 'Á', 'à', 'À', 'â', 'Â', 'e', 'E', 'é', 'É', 'è', 'È', 'ê', 'Ê', 'í', 'Í', 'o', 'ó', 'O', 'Ó', 'ô', 'Ô', 'ú', 'Ú', 'i', 'I', 'u', 'U', 'ü', 'Ü', 'û', 'Û', 'ï', 'Ï', 'î', 'Î'],
     elision = voyelles.concat(['h', 'H']),
     syllabes, nb = 0, max = 0;
@@ -120,7 +120,7 @@ elisioner = function (mots) {
 };
 
 // Compte le nombre de syllabes des vers d'un poème en suivant les règles classiques d'élision
-metrify = function (s) {
+function metrify(s) {
     var s = s.replace(/[\.,…\/#!$%\^&\*;\?:{}=\_`~()]/g, "").replace(/[0-9]/g, '').replace(/\s{2,}/g, " ").replace(/œ/g, "oe").replace(/æ/g, "ae").replace(/\r\n|\r|\n/g, "<br>"),
     vers = s.split("<br>").filter(function (v) { return v !== ''; }),
     mots = [],
