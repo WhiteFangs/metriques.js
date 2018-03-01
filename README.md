@@ -1,6 +1,8 @@
 # metriques.js
 A small Javascript module to get meter informations from french words
 
+*metriques.js regroupe les fonctionnalités Javascript de mon ancien projet [PoetifyJS](https://github.com/WhiteFangs/PoetifyJS) (déprécié au profit de ce projet) et qui contenait également des fonctions PHP pour récupérer des poèmes ou des rimes de la base de données [Drime](https://github.com/WhiteFangs/drime).*
+
 ## Functions
 
 ### Syllabes
@@ -32,6 +34,11 @@ Heureux qui comme Ulysse a fait un beau voyage";
 var metrique = metr.metrique(poem);
 
 ```
+
+## Examples
+
+Les applications [Paronyma](http://louphole.com/applications/panoryma/) et [Parolyma](http://louphole.com/applications/parolyma/) s'inspirent des fonctionnalités de metriques.js.
+
 
 ## Test
 
